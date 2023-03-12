@@ -32,7 +32,7 @@ def main():
 
 
 
-@st.cache
+@st.cache_resource
 def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
     df.to_csv('data.csv')
