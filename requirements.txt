@@ -1,0 +1,6 @@
+sckit-learn
+yfinance
+pandas
+ta
+xgboost
+
