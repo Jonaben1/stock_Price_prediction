@@ -35,7 +35,8 @@ def main():
 @st.cache_resource
 def download_data(op, start_date, end_date):
     df = yf.download(op, start=start_date, end=end_date, progress=False)
-    df.to_csv('data.csv')
+    return df
+
 
 
 option = st.sidebar.text_input('Enter a Stock Symbol', value='SPY')
@@ -55,7 +56,7 @@ if st.sidebar.button('Send'):
 
 
 
-data = pd.read_csv('data.csv')
+data = download_data()
 scaler = StandardScaler()
 
 def tech_indicators():
