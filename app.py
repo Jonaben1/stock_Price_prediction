@@ -56,7 +56,7 @@ if st.sidebar.button('Send'):
 
 
 
-data = download_data()
+data = download_data(option, start_date, end_date)
 scaler = StandardScaler()
 
 def tech_indicators():
